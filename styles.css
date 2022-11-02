@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #047aed;
+}
+
+/* Container */
+
+main {
+    font-family: "Open Sans", sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(to right top, #2980B9, #6DD5FA);
+    background: -webkit-linear-gradient(to right top, #2980B9, #6DD5FA);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.glass {
+    background: rgba( 255, 255, 255, 0.5 );
+    box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%);
+    min-height: 80vh;
+    max-width: 95%;
+    background: linear-gradient(
+        to right bottom,
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.3)
+    );
+    background: -webkit-linear-gradient(
+        to right bottom,
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.3)
+    );    
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    z-index: 2;
+    backdrop-filter: blur( 9.5px );
+    -webkit-backdrop-filter: blur( 9.5px );
+    display: flex;
+}
+
+.summary {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0px;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    background: linear-gradient(
+      to right bottom,
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0.1)
+    );
+    background: -webkit-linear-gradient(
+      to right bottom,
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0.1)
+    );
+    border-radius: 2rem;
+    box-shadow: 0 10px 1rem #0004;
+    max-width: 100%;
+}
+
+/* Profile */
+
+img {
+    border-radius: 50%;
+    margin-top: 5px;
+}
+
+h3 + p {
+    color: #658ec6;
+    font-weight: 500;
+    opacity: 0.8;
+    padding-bottom: 5px;
+}
+
+.block-divider {
+    width: 105px;
+    height: 5px;
+    border: 0;
+    background-color: #000080;
+    margin: 5px auto;
+}
+
+.writing-p {
+    font-weight: 300;
+    padding: 10px 10px;
+    line-height: 1.3rem;
+    word-break: break-all;
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+/* Contact Form */
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 500px;
+}
+
+.form-control {
+    background: linear-gradient( to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3) );
+    background: -webkit-linear-gradient( to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3) );
+    border: none;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    min-width: 90%;
+    margin: 10px;
+    line-height: 1.5;
+}
+
+.form-control-textarea {
+    border-radius: 0;
+}
+
+/* Utilities */
+
+.btn {
+    display: inline-block;
+    padding: 10px 30px;
+    cursor: pointer;
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.grow { 
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out; 
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;  
+    -o-transition: all .2s ease-in-out; 
+}
+.grow:hover {
+    transform: scale(1.1);background:#000080;
+    -webkit-transform: scale(1.1);background:#000080;
+    -moz-transform: scale(1.1);background:#000080;
+    -ms-transform: scale(1.1);background:#000080;
+    -o-transform: scale(1.1);background:#000080;
+}
+
+/* Responsiveness */
+
+@media only screen and (max-width: 768px) {
+    .summary{
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form form, .form-control {
+        min-width: auto;
+    }
+
+    .form-control, .btn {
+        width: 350px;
+    }
+
+}
+
+@media only screen and (max-width: 368px) {
+
+    .form-control, .btn {
+        width: 250px;
+    }
+
+}
